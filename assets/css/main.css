@@ -1831,3 +1831,185 @@ section,
 main p {
   text-align: justify;
 }
+#stats .stats-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center !important;
+}
+
+#stats .stats-item span,
+#stats .stats-item p {
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center !important;
+}
+/* Contact Submit Button */
+#contact-form button[type="submit"] {
+  background-color: #d6b238;
+  color: #ffffff;
+  border: none;
+  padding: 13px 35px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  font-family: "Roboto", sans-serif;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+/* Hover Effect */
+#contact-form button[type="submit"]:hover {
+  background-color: #bd9825;
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(189, 152, 37, 0.25);
+}
+
+/* Disabled saat mengirim */
+#contact-form button[type="submit"]:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+.video-container {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.video-container img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+/* About Video Play Button */
+.about-video {
+    position: relative;
+}
+
+.about-video .play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+    width: 85px;
+    height: 85px;
+    border-radius: 50%;
+
+    background: #d9b33f;
+    color: #fff;
+    border: none;
+    padding: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 42px;
+    z-index: 5;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.about-video .play:hover {
+    background: #bd9828;
+    transform: translate(-50%, -50%) scale(1.12);
+    color: #fff;
+}
+.portfolio .portfolio-item .portfolio-info {
+    padding: 25px 0px 25px 30px !important;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+/* Video Modal */
+.video-modal {
+    display: none;
+    position: fixed;
+    z-index: 99999;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+.video-modal.active {
+    display: flex;
+}
+
+.video-modal-content {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+}
+
+.video-wrapper {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+}
+
+.video-wrapper iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 10px;
+}
+
+.close-video {
+    position: absolute;
+    top: -45px;
+    right: 0;
+    background: transparent;
+    border: none;
+    color: white;
+    font-size: 35px;
+    cursor: pointer;
+}
+/* Tinggi gambar mengikuti tinggi teks Tentang Kami */
+.about .row {
+  align-items: stretch;
+}
+
+.about .about-video {
+  align-self: stretch !important;
+  position: relative;
+}
+
+.about .about-video img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+}
+
+/* Tablet & HP: kolom ditumpuk, jadi gambar butuh tinggi sendiri */
+@media (max-width: 991px) {
+  .about .about-video {
+    align-self: auto !important;
+    aspect-ratio: 16 / 10;
+  }
+}
+/* Ukuran popup gambar koleksi (GLightbox) seragam */
+.glightbox-container .gslide-image img {
+  width: min(90vw, 75vh) !important;
+  height: min(90vw, 75vh) !important;
+  max-width: none !important;
+  max-height: none !important;
+  object-fit: cover;
+  object-position: center;
+  background: #000;
+}
